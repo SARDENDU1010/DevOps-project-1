@@ -1,0 +1,21 @@
+goal: copy 2 folders from source to artifactory
+
+step1. server connection -
+	manulal step - manulay login- manulay folder select & zip it and copy it in required path
+	automated process-- assuming ado already has a connection established with dev server when dev pipeline runs
+		you need ado agent on remote server
+
+step2- copy or zip and archive the folders and put into destination path (as per parameters-ps1)
+	either manually run zip, tar & copy command
+	otherwise write a powershell script to copy folders, zip/archive & tar it into required path
+
+step3 - set artifactory path, url & other parameters
+	set artifactory url
+	set artifactory token/credentials
+	set artifactory path
+	invoke artifactroy api call to push the file into artifactory
+
+step4 - run your pipeline to execute parameters.ps1 with appropriate parameters & variables
+
+restricted artifactory ingestion path
+artifactory generic path
